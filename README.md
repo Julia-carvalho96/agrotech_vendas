@@ -70,13 +70,13 @@ agrotech_vendas/
 1. Clone o repositório ou baixe os arquivos.
 2. Garanta que a pasta `dados/` existe (ou crie manualmente).
 3. Execute o programa com:
-
 ```bash
 python main.py
 
+
 4. Siga o menu exibido no terminal:
-1) Registrar nova venda
-2) Listar vendas
-3) Mostrar totais por produto
-4) Gerar relatório .txt
-0) Sair
+  1) Registrar nova venda
+  2) Listar vendas
+  3) Mostrar totais por produto
+  4) Gerar relatório .txt
+  0) Sair
