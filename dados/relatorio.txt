@@ -1,0 +1,7 @@
+Relatório de vendas
+
+----------------------------------------
+milho    | vendas:  2 | total: R$ 145.00
+arroz    | vendas:  1 | total: R$ 45.00
+----------------------------------------
+TOTAL GERAL: R$ 190.00

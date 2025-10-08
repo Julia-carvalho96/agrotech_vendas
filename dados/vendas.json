@@ -1,0 +1,23 @@
+[
+  {
+    "produto": "milho",
+    "quantidade": 5.0,
+    "preco_unitario": 25.0,
+    "total": 125.0,
+    "data": "2025-10-08"
+  },
+  {
+    "produto": "milho",
+    "quantidade": 4.0,
+    "preco_unitario": 5.0,
+    "total": 20.0,
+    "data": "2025-10-08"
+  },
+  {
+    "produto": "arroz",
+    "quantidade": 5.0,
+    "preco_unitario": 9.0,
+    "total": 45.0,
+    "data": "2025-10-08"
+  }
+]
