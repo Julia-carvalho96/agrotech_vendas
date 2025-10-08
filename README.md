@@ -1,109 +1,82 @@
-# Agrotech Vendas
+# agrotech_vendas
 
-## 🌾 Visão geral
+## 🌾 Visão geral do projeto
 
-O **Agrotech Vendas** é uma aplicação em Python criada como parte de um projeto acadêmico da FIAP com foco no **agronegócio brasileiro**.  
-Seu principal objetivo é auxiliar **produtores rurais e pequenos comerciantes agrícolas** no controle das vendas realizadas, permitindo uma visão clara do que foi vendido, quando, para quem e por qual valor.
+O **agrotech_vendas** é um sistema simples, funcional e baseado em terminal para **registro e análise de vendas agrícolas**. Foi desenvolvido em Python como parte do projeto da disciplina da FIAP, com foco em **facilitar a gestão de vendas de pequenos produtores rurais**.
 
-Essa solução contribui diretamente para o fortalecimento da **gestão comercial** dos produtores, facilitando o acesso à informação e a tomada de decisão — mesmo em contextos com pouca familiaridade com tecnologia ou ausência de conexão com sistemas sofisticados.
-
----
-
-## 🌱 Problema resolvido
-
-Pequenos e médios produtores do agronegócio frequentemente enfrentam desafios para **organizar suas vendas de forma estruturada**.  
-Muitos ainda fazem registros manuais, o que gera risco de perda de dados, erros de cálculo e falta de visibilidade sobre a saúde financeira da propriedade.
-
-O sistema **Agrotech Vendas** atua nesse ponto, oferecendo uma interface simples no terminal para registrar, consultar e salvar vendas com consistência, permitindo uma gestão melhor da produção escoada.
+O sistema permite:
+- Registrar vendas com data, produto, quantidade, preço e total;
+- Listar todas as vendas feitas;
+- Ver um resumo por produto (número de vendas e total acumulado);
+- Gerar um relatório `.txt` com os totais por produto.
 
 ---
 
-## 🧩 Setor do agronegócio atendido
+## 🧑‍🌾 Área do agronegócio atendida
 
-Esta solução atua principalmente nos seguintes setores do agro:
-
-- **Distribuição e consumo**: ao controlar e registrar as vendas realizadas, o sistema contribui para o rastreamento e melhoria na logística de saída da produção.  
-- **Serviços de apoio**: oferece suporte digital simples e acessível para a gestão de vendas, sem depender de sistemas complexos.
+Esta solução atua no setor de **distribuição e consumo**, ao permitir que pequenos produtores tenham **visibilidade sobre suas vendas** e desempenho financeiro. Ela substitui o controle manual (papel ou planilha) por um sistema digital acessível e fácil de usar.
 
 ---
 
-## ⚙️ Funcionalidades
+## 🧠 Tecnologias utilizadas
 
-- Registro de novas vendas (produto, cliente, quantidade, valor)  
-- Consulta de vendas anteriores  
-- Salvamento e leitura de dados em arquivos `.txt` e `.json`  
-- Conexão com banco de dados Oracle para armazenar e consultar registros  
-- Validação de entrada de dados para evitar erros  
-- Estrutura de código organizada com subalgoritmos (funções reutilizáveis)
+O projeto utiliza os principais recursos aprendidos nos capítulos 3 a 6 da disciplina de Python, incluindo:
 
----
+- ✅ Subalgoritmos com funções;
+- ✅ Estruturas de dados (listas, dicionários);
+- ✅ Manipulação de arquivos (`.json` e `.txt`);
+- ✅ Uso de condicionais, laços e tratamento de exceções;
+- ✅ Interface de menu no terminal (sem interface gráfica).
 
-## 💡 Tecnologias utilizadas
-
-| Tecnologia     | Uso principal                                |
-|----------------|-----------------------------------------------|
-| Python 3.x     | Lógica do sistema e manipulação de dados      |
-| `.txt`         | Armazenamento de relatórios                   |
-| `.json`        | Salvamento e recuperação de dados estruturados|
-| Oracle DB      | Persistência dos dados em banco relacional    |
+> O sistema é 100% utilizável via linha de comando e pensado para rodar em qualquer ambiente com Python 3 instalado.
 
 ---
 
-## 📂 Estrutura de pastas
+## 📁 Estrutura do projeto
 
 agrotech_vendas/
-├── main.py # Arquivo principal da aplicação
-├── funcoes.py # Subalgoritmos (cadastrar, consultar etc.)
-├── conexao_oracle.py # Módulo de conexão com Oracle DB
 ├── dados/
-│ ├── vendas.json # Armazenamento estruturado de dados
-│ └── relatorio.txt # Exportação de relatório em texto
-└── README.md # Este arquivo
+│ ├── vendas.json # Base de dados com as vendas registradas
+│ └── relatorio.txt # Relatório com totais por produto (gerado pelo sistema)
+│
+├── main.py # Arquivo principal com o código do sistema
+├── README.md # Documentação do projeto
 
 
-## 🧪 Como executar o projeto
+---
 
-1. **Clone o repositório:**
+## 📌 Funcionalidades
 
-git clone https://github.com/Julia-carvalho96/agrotech_vendas.git
-Navegue até a pasta:
+| Funcionalidade                | Descrição |
+|------------------------------|-----------|
+| Registrar nova venda         | Solicita nome do produto, quantidade e preço unitário. Calcula o total e salva no arquivo `vendas.json`. |
+| Listar vendas registradas    | Mostra todas as vendas registradas até o momento, com data, produto e valor. |
+| Mostrar totais por produto   | Exibe o total de vendas e o valor acumulado por produto. |
+| Gerar relatório `.txt`       | Cria um relatório formatado e salva no arquivo `relatorio.txt`. |
 
+---
 
-cd agrotech_vendas
-Crie e ative o ambiente virtual (opcional, mas recomendado):
+## 🧪 Validações aplicadas
 
+- Tratamento de erros ao abrir arquivos inexistentes ou corrompidos;
+- Prevenção de divisão por zero;
+- Verificação se há vendas antes de exibir ou gerar relatórios;
+- Conversão segura de entradas para números (`float()`).
 
-python -m venv .venv
-source .venv/bin/activate  # Mac/Linux
-.venv\Scripts\activate     # Windows
-Instale as dependências (se houver):
+---
 
-pip install -r requirements.txt
-Execute o sistema:
+## 📝 Como executar o projeto
 
+1. Clone o repositório ou baixe os arquivos.
+2. Garanta que a pasta `dados/` existe (ou crie manualmente).
+3. Execute o programa com:
+
+```bash
 python main.py
-🧠 Aprendizados aplicados
-Este projeto foi construído com base nos seguintes conceitos aprendidos nos capítulos 3 a 6 da disciplina de Python:
 
-Subalgoritmos: uso de funções com passagem de parâmetros
-
-Estruturas de dados: listas, tuplas e dicionários para armazenar e manipular informações
-
-Manipulação de arquivos: leitura e escrita em .txt e .json
-
-Conexão com banco de dados Oracle: integração para armazenamento e consulta de informações
-
-👩‍🌾 Futuras melhorias
-Interface gráfica simples (Tkinter ou versão web)
-
-Cadastro de clientes e produtos
-
-Exportação em PDF ou Excel
-
-Dashboard com relatórios de vendas
-
-👥 Integrantes do grupo
-Julia Duarte de Carvalho – RM 567816
-
-📜 Licença
-Este projeto é parte de uma atividade acadêmica e não possui licença de uso comercial.
+4. Siga o menu exibido no terminal:
+1) Registrar nova venda
+2) Listar vendas
+3) Mostrar totais por produto
+4) Gerar relatório .txt
+0) Sair
