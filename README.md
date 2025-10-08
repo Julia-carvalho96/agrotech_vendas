@@ -70,9 +70,8 @@ agrotech_vendas/
 1. Clone o repositório ou baixe os arquivos.
 2. Garanta que a pasta `dados/` existe (ou crie manualmente).
 3. Execute o programa com:
-```bash
-python main.py
 
+python main.py
 
 4. Siga o menu exibido no terminal:
   1) Registrar nova venda
@@ -80,3 +79,27 @@ python main.py
   3) Mostrar totais por produto
   4) Gerar relatório .txt
   0) Sair
+
+---
+
+## 📎 Dados do projeto para entrega
+
+**Nome da aluna:** Julia Duarte de Carvalho  
+**RA:** RM567816  
+**Curso:** Inteligência Artificial - FIAP  
+**Projeto:** Sistema de Controle de Vendas para Produtores Rurais  
+**Data da entrega:** Outubro de 2025
+
+**Repositório no GitHub:**  
+🔗 [https://github.com/Julia-carvalho96/agrotech_vendas](https://github.com/Julia-carvalho96/agrotech_vendas)
+
+---
+
+📂 O repositório contém os seguintes arquivos principais:
+
+- `main.py` – Código-fonte principal do sistema  
+- `dados/vendas.json` – Base de dados com as vendas (armazenadas localmente em JSON)  
+- `dados/relatorio.txt` – Relatório exportado em formato `.txt`  
+- `README.md` – Documentação completa do projeto  
+
+O projeto foi desenvolvido em Python e pode ser executado localmente via terminal.
